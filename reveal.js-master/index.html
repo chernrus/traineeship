@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+		.reveal td,
+		.reveal th {
+			font-size: 24px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>
+						Сетевая модель OSI<br>
+						Уровни стека TCP/IP
+					</h2>
+				</section>
+				<section>
+					<p>Семь уровней сетевой модели OSI:</p><br>
+					<ol>
+						7. Прикладной уровень<br>
+						6. Уровень представления<br>
+						5. Сеансовый уровень<br>
+						4. Транспортный уровень<br>
+						3. Сетевой уровень<br>
+						2. Канальный уровень<br>
+						1. Физический уровень<br>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<p>
+							Модель OSI
+						</p>
+						<img src="osi.png" width="600" height="500">
+					</section>
+
+					<section>
+						<table>
+							<thead>
+								<tr>
+									<th>Уровень</th>
+									<th>Тип данных</th>
+									<th>Основные функции</th>
+									<th>Примеры протоколов</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>7.Прикладной уровень</th>
+									<th>Данные</th>
+									<th>Взаимодействие с пользователем, доступ к сетевым службам</th>
+									<th>POP3, HTTP, SMTP</th>
+								</tr>
+								<tr>
+									<th>6.Уровень представления</th>
+									<th>Данные</th>
+									<th>Преобразование и представление файлов</th>
+									<th>ASCII, JPEG</th>
+								</tr>
+								<tr>
+									<th>5.Сеансовый уровень</th>
+									<th>Данные</th>
+									<th>Управление сеансами связи</th>
+									<th>SCP, PAP</th>
+								</tr>
+								<tr>
+									<th>4.Транспортный уровень</th>
+									<th>Сегменты, дейтаграммы</th>
+									<th>Прямая связь между конечными пунктами и надежность</th>
+									<th>TCP, UDP, SCTP</th>
+								</tr>
+								<tr>
+									<th>3.Сетевой уровень</th>
+									<th>Пакеты</th>
+									<th>Определение маршрута и логическая адресация</th>
+									<th>IPv4, IPv6</th>
+								</tr>
+								<tr>
+									<th>2.Канальный уровень</th>
+									<th>Кадры</th>
+									<th>Физическая адресация</th>
+									<th>IEEE 802.2, Ethernet</th>
+								</tr>
+								<tr>
+									<th>1.Физический уровень</th>
+									<th>Биты</th>
+									<th>Работа со средой передачи, сигналами и двоичными данными</th>
+									<th>Провод</th>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+				<section>
+					<h2>Стек протоколов TCP/IP</h2>
+					<p>
+						<span class="fragment">1.Прикладной уровень</span>
+						<span class="fragment"> - SMTP, HTTP, FTP, SSH</span>
+					</p>
+					<p>
+						<span class="fragment">2.Транспортный уровень</span>
+						<span class="fragment"> - TCP, UDP</span>
+					</p>
+					<p>
+						<span class="fragment">3.Сетевой уровень</span>
+						<span class="fragment"> - ICMP, IGMP</span>
+					</p>
+					<p>
+						<span class="fragment">4.Канальный уровень</span>
+						<span class="fragment"> - Ethernet, IEEE 802</span>
+					</p>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
